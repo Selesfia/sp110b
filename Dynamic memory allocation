@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main(){
+   //Declaring variables and pointer//
+   int numofele,i;
+   int *p;
+   //Reading elements as I/p//
+   printf("Enter the number of elements in the array: ");
+   scanf("%d",&numofele);
+   //Declaring malloc function//
+   p = (int *)malloc(numofele * (sizeof(int)));
+   //Reading elements into array of pointers//
+   for(i=0;i<numofele;i++){
+      p[i]=i+1;
+      printf("Element %d of array is : %d\n",i,p[i]);
+   }
+}
